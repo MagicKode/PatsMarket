@@ -8,6 +8,7 @@ import com.example.demo.store.KeyRepository;
 import com.example.demo.store.KeyStorage;
 import com.example.demo.store.UserRepository;
 import com.example.demo.store.UserStorage;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Slf4j
 public class UserService {
 
     private static long userId = 1; //добавляем ID юзеру, чтобы при создании нового пользователя, вёлся счёт пользователя.
@@ -65,6 +67,7 @@ public class UserService {
     }*/
 
     public void addUser(User user){ //альтернативный метод ДОБАВЛЕНИЯ / СОЗДАНИЯ  нового Юзера.
+        log.info("user is created");
         userRepository.save(user);
     }
 

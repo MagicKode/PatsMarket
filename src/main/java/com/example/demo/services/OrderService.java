@@ -6,6 +6,7 @@ import com.example.demo.models.Pet;
 import com.example.demo.models.PetStatus;
 import com.example.demo.store.OrderRepository;
 import com.example.demo.store.PetRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,7 @@ import java.util.*;
 
 
 @Service
+@Slf4j
 public class OrderService {
 
     @Autowired
@@ -32,6 +34,7 @@ public class OrderService {
 */
 
    public void addOrder(Order order){//альтернативный метод ДОБАВЛЕНИЯ / СОХРАНЕНИЯ заказа в лист
+       log.trace("Order is added");
        orderRepository.save(order);
    }
 

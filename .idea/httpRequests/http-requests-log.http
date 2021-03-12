@@ -1,0 +1,202 @@
+POST http://localhost:8080/store/user
+Content-Type: application/json
+
+{
+  "id": 2,
+  "userName": "Dima",
+  "userStatus": "ADMIN"
+  }
+
+###
+
+POST http://localhost:8080/store/user
+Content-Type: application/json
+
+{
+  "id": 2,
+  "userName": "Dima",
+  "userStatus": "ADMIN"
+  }
+
+<> 2021-03-12T074025.404.json
+
+###
+
+GET http://localhost:8080/user/2
+X-Key:
+X-Status:
+
+###
+
+GET http://localhost:8080/user/2
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/store/user
+Content-Type: application/json
+
+{
+  "id": 2,
+  "userName": "Dima",
+  "userStatus": "ADMIN"
+  }
+
+<> 2021-03-12T073843.404.json
+
+###
+
+GET http://localhost:8080/store/inventory
+
+<> 2021-03-12T073834.200.json
+
+###
+
+POST http://localhost:8080/store/category
+Content-Type: application/json
+
+{
+  "name": "Toby"
+}
+
+<> 2021-03-12T073830.404.json
+
+###
+
+GET http://localhost:8080/store/order/3
+
+###
+
+POST http://localhost:8080/store/order
+Content-Type: application/json
+
+{
+"petId": 2,
+"quantity":5,
+"shipDate": "2021-03-01T17:00:31.618Z",
+"oerderStatus": "APPROVED",
+"userId": 333,
+"complete": true
+
+}
+
+<> 2021-03-12T073814.404.json
+
+###
+
+GET http://localhost:8080/pet/id
+
+<> 2021-03-12T073802.500.json
+
+###
+
+POST http://localhost:8080/pet
+Content-Type: application/json
+
+{
+  "category": {
+    "name": "string"
+  },
+  "name": "Tobby",
+  "tags": [
+    {"name": "string1"},
+    {"name": "string2"},
+    {"name": "string3"}
+  ],
+  "petStatus": "AVAILABLE"
+}
+
+<> 2021-03-12T073752.201.txt
+
+###
+
+POST http://localhost:8080/pet
+Content-Type: application/json
+
+{
+  "category": {
+    "name": "string"
+  },
+  "name": "Tobby",
+  "tags": [
+    {"name": "string1"},
+    {"name": "string2"},
+    {"name": "string3"}
+  ],
+  "petStatus": "AVAILABLE"
+}
+
+###
+
+POST http://localhost:8080/pet
+Content-Type: application/json
+
+{
+  "category": {
+    "name": "string"
+  },
+  "name": "Tobby",
+  "tags": [
+    {"name": "string1"},
+    {"name": "string2"},
+    {"name": "string3"}
+  ],
+  "petStatus": "AVAILABLE"
+}
+
+###
+
+POST http://localhost:8080/pet
+Content-Type: application/json
+
+{
+  "category": {
+    "name": "string"
+  },
+  "name": "Tobby",
+  "tags": [
+    {"name": "string1"},
+    {"name": "string2"},
+    {"name": "string3"}
+  ],
+  "petStatus": "AVAILABLE"
+}
+
+###
+
+POST http://localhost:8080/pet
+Content-Type: application/json
+
+{
+  "category": {
+    "name": "string"
+  },
+  "name": "Tobby",
+  "tags": [
+    {"name": "string1"},
+    {"name": "string2"},
+    {"name": "string3"}
+  ],
+  "petStatus": "AVAILABLE"
+}
+
+###
+
+POST http://localhost:8080/pet
+Content-Type: application/json
+
+{
+  "category": {
+    "name": "string"
+  },
+  "name": "Tobby",
+  "tags": [
+    {"name": "string1"},
+    {"name": "string2"},
+    {"name": "string3"}
+  ],
+  "petStatus": "AVAILABLE"
+}
+
+###
+

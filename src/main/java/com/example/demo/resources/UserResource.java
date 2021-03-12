@@ -22,7 +22,6 @@ public class UserResource {  //почему мы не пишем данный к
     @Autowired
     KeyService keyService;
 
-    @Autowired
 
     @PostMapping(path = "/createWithArray") //аналог сервлетному запросу POST
     public ResponseEntity<String> createUser(@RequestBody User user){

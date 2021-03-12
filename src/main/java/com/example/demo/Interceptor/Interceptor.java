@@ -8,6 +8,7 @@ import com.example.demo.services.UserService;
 import com.example.demo.store.UserStorage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
@@ -15,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Enumeration;
 import java.util.Objects;
 
+@Component
 public class Interceptor implements HandlerInterceptor { // это перехватчик запросов, до момента достижения ими клиенте, дающие возможность вносить коррективы в запрос на данной стадии.
     // ОБЪЯСНИТЬ ВСЮ ЛОГИКУ НАПИСАНИЯ?????
 
