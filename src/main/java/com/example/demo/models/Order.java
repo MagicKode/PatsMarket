@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "orders") //ДЛя чего данная аннотация,,,
+@Table(name = "orders") //Для чего данная аннотация??? Для создания директорий в таблице базы данных под этими именами
 
 public class Order { //заказ и его характеристики
 

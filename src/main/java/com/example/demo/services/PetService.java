@@ -98,7 +98,7 @@ public class PetService { //
         petRepository.deleteById(id);
     }
 
-    public List<Pet> petList(){//альтернативный метод НАХОЖДЕНИЯ ВСЕХ зверей в Листе
+    public List<Pet> getPetList(){//альтернативный метод НАХОЖДЕНИЯ ВСЕХ зверей в Листе
         return petRepository.findAll();
     }
 

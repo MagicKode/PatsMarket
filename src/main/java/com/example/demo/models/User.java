@@ -4,10 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
 
@@ -27,20 +24,24 @@ public class User {
     private String email;
     private String password;
     private String phone;
-    private int userStatus;
+
+    @Enumerated(value = EnumType.STRING)
+    private UserStatus userStatus;
 
 
-    public boolean equals(Object o){//Для чего нужен данный метод??
+    public boolean equals(Object o){//Для чего нужен данный метод?? чтобы при сравнении Юзеров между собой, он сравнивал именно те поля, которые мы укказываем
         if (this == o)
             return true;
         if(o == null || getClass() != o.getClass())
             return false;
         User user = (User) o;
-        return Objects.equals(userName, user.userName) && Objects.equals(password, user.password);
+        return Objects.equals(userName, user.userName) &&
+                Objects.equals(password, user.password)&&
+        userStatus == user.userStatus;
     }
 
     @Override
-    public int hashCode(){
-        return Objects.hash(userName, password);
+    public int hashCode(){// позволяет отличать Юзеров в базе
+        return Objects.hash(userName, password, userStatus);
     }
 }

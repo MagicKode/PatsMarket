@@ -16,7 +16,10 @@ public class WebConfiguration implements WebMvcConfigurer { //объяснить
     public void addInterceptors(InterceptorRegistry registry){
         registry
                 .addInterceptor(interceptor)
-                .addPathPatterns("/store/order");
+                /*.addPathPatterns("/store/order")
+                .addPathPatterns("/user/auth")*/
+                .addPathPatterns("/user/id")
+                .addPathPatterns("/user/");
 
 
     }

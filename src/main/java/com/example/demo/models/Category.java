@@ -16,7 +16,7 @@ import javax.persistence.Id;
 public class Category {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //для чего данная аннотация??
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //для чего данная аннотация?? Стратегия Как будет осуществляться генерация (уникальный инкремент). Ш
     private long id;
     private String name;
 }

@@ -17,12 +17,12 @@ public class Pet { //какой зверь (какие параметры зап
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @OneToOne(cascade = CascadeType.ALL) //ДЛя чего данная аннотация??
-    private Category category;
+    @OneToOne(cascade = CascadeType.ALL) //ДЛя чего данная аннотация?? Для того, чтобы связать одну запись с одной
+    private Category category; // у одного животного может быть только ОДНА категори (кот/собака и тд)
     private String name;
 
     @OneToMany(cascade = CascadeType.ALL) //ДЛя чего данная аннотация??
-    private List<Tag>tags;
+    private List<Tag>tags;  // к этому полю может быть применен ДОБАВЛНЕИЕ тэга много раз
     private PetStatus petStatus;
 
 
