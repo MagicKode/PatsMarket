@@ -3,6 +3,7 @@ package com.example.demo.resources;
 import com.example.demo.models.Pet;
 import com.example.demo.models.PetStatus;
 import com.example.demo.services.PetService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "/pet") //аннотация ищет файлы , если вписать и его порт
+@Slf4j
 public class PetResource {
 
     @Autowired
@@ -20,6 +22,7 @@ public class PetResource {
 
     @PostMapping //это аналоги doGet doPost
     public ResponseEntity<String> createPet(@RequestBody Pet pet){ //Это шаблон запроса, котоый должен быть передан. А класс возвращает Шаблонированный ответ PET.Для этого и пишется аннотация в скобках
+        log.debug("Pet was created in Resource");//добавляем ЛОГИРОВАНИЕ
         petService.createPet(pet);
         return new ResponseEntity<>("Pet" + pet.getName()+" created", HttpStatus.CREATED);
     }

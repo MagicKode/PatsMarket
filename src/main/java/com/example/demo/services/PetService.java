@@ -5,6 +5,7 @@ import com.example.demo.models.Pet;
 import com.example.demo.models.PetStatus;
 import com.example.demo.store.PetRepository;
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-@Service //для чего данная аннотация?
+@Service
+@Slf4j
 public class PetService { //
 
     @Autowired
@@ -77,6 +79,7 @@ public class PetService { //
 
 
     public void createPet(Pet pet){ //альтернативный метод СОЗДАНИЯ / ДОБАВЛЕНИЯ зверя в list
+        log.info("Pet is created!!");//добавляем ЛОГИРОВАНИЕ
         petRepository.save(pet);
     }
 

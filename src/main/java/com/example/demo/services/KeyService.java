@@ -2,10 +2,12 @@ package com.example.demo.services;
 
 import com.example.demo.models.Key;
 import com.example.demo.store.KeyRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+@Slf4j
 public class KeyService {
 
     @Autowired
@@ -13,6 +15,7 @@ public class KeyService {
 
 
     public void addKey(Key key){//метод ДОБАВЛЕНИЯ ключа в репозиторий
+        log.warn("NotValidKey!!!");
         keyRepository.save(key);
     }
 

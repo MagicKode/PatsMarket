@@ -34,7 +34,7 @@ public class OrderService {
 */
 
    public void addOrder(Order order){//альтернативный метод ДОБАВЛЕНИЯ / СОХРАНЕНИЯ заказа в лист
-       log.trace("Order is added");
+       log.info("Order is added"); //добавляем ЛОГИРОВАНИЕ
        orderRepository.save(order);
    }
 

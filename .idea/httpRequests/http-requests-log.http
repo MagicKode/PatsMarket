@@ -1,3 +1,317 @@
+POST http://localhost:8080/pet
+Content-Type: application/json
+
+{
+  "category": {
+    "name": "string"
+  },
+  "name": "Tobby",
+  "tags": [
+    {"name": "string1"},
+    {"name": "string2"},
+    {"name": "string3"}
+  ],
+  "petStatus": "AVAILABLE"
+}
+
+<> 2021-03-12T092928.201.txt
+
+###
+
+POST http://localhost:8080/pet
+Content-Type: application/json
+
+{
+  "category": {
+    "name": "string"
+  },
+  "name": "Tobby",
+  "tags": [
+    {"name": "string1"},
+    {"name": "string2"},
+    {"name": "string3"}
+  ],
+  "petStatus": "AVAILABLE"
+}
+
+<> 2021-03-12T092833.201.txt
+
+###
+
+POST http://localhost:8080/pet
+Content-Type: application/json
+
+{
+  "category": {
+    "name": "string"
+  },
+  "name": "Tobby",
+  "tags": [
+    {"name": "string1"},
+    {"name": "string2"},
+    {"name": "string3"}
+  ],
+  "petStatus": "AVAILABLE"
+}
+
+<> 2021-03-12T092411.201.txt
+
+###
+
+POST http://localhost:8080/store/order
+Content-Type: application/json
+
+{
+"petId": 2,
+"quantity":5,
+"shipDate": "2021-03-01T17:00:31.618Z",
+"oerderStatus": "APPROVED",
+"userId": 333,
+"complete": true
+
+}
+
+<> 2021-03-12T092403.404.json
+
+###
+
+POST http://localhost:8080/store/category
+Content-Type: application/json
+
+{
+  "name": "Toby"
+}
+
+<> 2021-03-12T092357.404.json
+
+###
+
+POST http://localhost:8080/store/user
+Content-Type: application/json
+
+{
+  "id": 2,
+  "userName": "Dima",
+  "userStatus": "ADMIN"
+  }
+
+<> 2021-03-12T092346.404.json
+
+###
+
+POST http://localhost:8080/pet
+Content-Type: application/json
+
+{
+  "category": {
+    "name": "string"
+  },
+  "name": "Tobby",
+  "tags": [
+    {"name": "string1"},
+    {"name": "string2"},
+    {"name": "string3"}
+  ],
+  "petStatus": "AVAILABLE"
+}
+
+<> 2021-03-12T092140.201.txt
+
+###
+
+POST http://localhost:8080/store/order
+Content-Type: application/json
+
+{
+"petId": 2,
+"quantity":5,
+"shipDate": "2021-03-01T17:00:31.618Z",
+"oerderStatus": "APPROVED",
+"userId": 333,
+"complete": true
+
+}
+
+<> 2021-03-12T091923.404.json
+
+###
+
+POST http://localhost:8080/pet
+Content-Type: application/json
+
+{
+  "category": {
+    "name": "string"
+  },
+  "name": "Tobby",
+  "tags": [
+    {"name": "string1"},
+    {"name": "string2"},
+    {"name": "string3"}
+  ],
+  "petStatus": "AVAILABLE"
+}
+
+<> 2021-03-12T091412.201.txt
+
+###
+
+POST http://localhost:8080/pet
+Content-Type: application/json
+
+{
+  "category": {
+    "name": "string"
+  },
+  "name": "Tobby",
+  "tags": [
+    {"name": "string1"},
+    {"name": "string2"},
+    {"name": "string3"}
+  ],
+  "petStatus": "AVAILABLE"
+}
+
+<> 2021-03-12T091332.201.txt
+
+###
+
+POST http://localhost:8080/pet
+Content-Type: application/json
+
+{
+  "category": {
+    "name": "string"
+  },
+  "name": "Tobby",
+  "tags": [
+    {"name": "string1"},
+    {"name": "string2"},
+    {"name": "string3"}
+  ],
+  "petStatus": "AVAILABLE"
+}
+
+<> 2021-03-12T091134.201.txt
+
+###
+
+POST http://localhost:8080/pet
+Content-Type: application/json
+
+{
+  "category": {
+    "name": "string"
+  },
+  "name": "Tobby",
+  "tags": [
+    {"name": "string1"},
+    {"name": "string2"},
+    {"name": "string3"}
+  ],
+  "petStatus": "AVAILABLE"
+}
+
+###
+
+POST http://localhost:8080/pet
+Content-Type: application/json
+
+{
+  "category": {
+    "name": "string"
+  },
+  "name": "Tobby",
+  "tags": [
+    {"name": "string1"},
+    {"name": "string2"},
+    {"name": "string3"}
+  ],
+  "petStatus": "AVAILABLE"
+}
+
+<> 2021-03-12T090844.201.txt
+
+###
+
+POST http://localhost:8080/pet
+Content-Type: application/json
+
+{
+  "category": {
+    "name": "string"
+  },
+  "name": "Tobby",
+  "tags": [
+    {"name": "string1"},
+    {"name": "string2"},
+    {"name": "string3"}
+  ],
+  "petStatus": "AVAILABLE"
+}
+
+<> 2021-03-12T090640.201.txt
+
+###
+
+POST http://localhost:8080/pet
+Content-Type: application/json
+
+{
+  "category": {
+    "name": "string"
+  },
+  "name": "Tobby",
+  "tags": [
+    {"name": "string1"},
+    {"name": "string2"},
+    {"name": "string3"}
+  ],
+  "petStatus": "AVAILABLE"
+}
+
+###
+
+POST http://localhost:8080/pet
+Content-Type: application/json
+
+{
+  "category": {
+    "name": "string"
+  },
+  "name": "Tobby",
+  "tags": [
+    {"name": "string1"},
+    {"name": "string2"},
+    {"name": "string3"}
+  ],
+  "petStatus": "AVAILABLE"
+}
+
+###
+
+POST http://localhost:8080/store/user
+Content-Type: application/json
+
+{
+  "id": 2,
+  "userName": "Dima",
+  "userStatus": "ADMIN"
+  }
+
+###
+
+POST http://localhost:8080/store/user
+Content-Type: application/json
+
+{
+  "id": 2,
+  "userName": "Dima",
+  "userStatus": "ADMIN"
+  }
+
+###
+
 POST http://localhost:8080/store/user
 Content-Type: application/json
 
