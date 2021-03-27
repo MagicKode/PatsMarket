@@ -2,9 +2,11 @@ package com.example.demo.store;
 
 import com.example.demo.models.Key;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 @Repository
+@Component
 public interface KeyRepository extends JpaRepository <Key, Long> {  //уточнить про дополнительные методы????
 
     boolean findByKey(String key);

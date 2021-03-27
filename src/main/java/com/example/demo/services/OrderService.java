@@ -23,8 +23,45 @@ public class OrderService {
     @Autowired
     PetRepository petRepository;
 
-   // private List<Order> orderList = new ArrayList<>(); //создаём лист ХРАНЕНИЯ заказов.
-   // private static long orderId=1; //задаём начальное значение ID заказа, чтобы потом при добавлении получалось коненчое число заказов
+
+
+   public void addOrder(Order order){//альтернативный метод ДОБАВЛЕНИЯ / СОХРАНЕНИЯ заказа в лист
+       log.info("Order is added"); //добавляем ЛОГИРОВАНИЕ
+       orderRepository.save(order);
+   }
+
+    public Optional<Order> getOrderById(long id){ //альтернативный метод НАХОЖДЕНИЯ заказа по ID
+       log.info("Order with id= "+id+" is found.");
+        return orderRepository.findById(id);
+    }
+
+
+    public boolean deleteOrderById(long id){ //альтернативный метод УДАЛЕНИЯ заказа по ID
+       log.info("Order with id= "+id+" is deleted");
+        if (orderRepository.existsById(id)){
+            orderRepository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
+
+
+  public Map<PetStatus,Integer> getQuantityOfStatus(List<Pet> petList){ //альтернативный компактный метод. метод позволяет подсчитать и рассортировать статусы.
+      Map<PetStatus, Integer> statusList = new HashMap<>();
+      for (Pet currentPet : petList){
+          statusList.put(currentPet.getPetStatus(),statusList.getOrDefault(currentPet.getPetStatus(),0)+1); //
+      }
+      return statusList;
+  }
+}
+
+
+
+
+
+
+// private List<Order> orderList = new ArrayList<>(); //создаём лист ХРАНЕНИЯ заказов.
+// private static long orderId=1; //задаём начальное значение ID заказа, чтобы потом при добавлении получалось коненчое число заказов
 
    /* public void addOrder(Order order){ //создаём метод СОЗДАНИЯ/ДОБАВЛЕНИЯ заказа в лист.
         order.setId(orderId);
@@ -33,10 +70,12 @@ public class OrderService {
     }
 */
 
-   public void addOrder(Order order){//альтернативный метод ДОБАВЛЕНИЯ / СОХРАНЕНИЯ заказа в лист
-       log.info("Order is added"); //добавляем ЛОГИРОВАНИЕ
-       orderRepository.save(order);
-   }
+
+
+
+
+
+
 
     /*public Order getOrderById(long id){ //создаём метод НАХОЖДЕНИЯ заказа по ID
         for (Order order : orderList) {
@@ -47,9 +86,10 @@ public class OrderService {
         return null;
     }*/
 
-    public Optional<Order> getOrderById(long id){ //альтернативный метод НАХОЖДЕНИЯ заказа по ID
-        return orderRepository.findById(id);
-    }
+
+
+
+
 
 
     /*public boolean deleteOrderById(long id){ //создаём метод УДАЛЕНИЯ заказа из листа по ID
@@ -63,13 +103,11 @@ public class OrderService {
     }*/
 
 
-    public boolean deleteOrderById(long id){ //альтернативный метод УДАЛЕНИЯ заказа по ID
-        if (orderRepository.existsById(id)){
-            orderRepository.deleteById(id);
-            return true;
-        }
-        return false;
-    }
+
+
+
+
+
 
 
   /*  //для чего создаётся МАПА и как она работает подробно?? Мапа нужна для того, чтобы выводить в результате
@@ -100,12 +138,3 @@ public class OrderService {
                 return statusList;
 
     }*/
-
-  public Map<PetStatus,Integer> getQuantityOfStatus(List<Pet> petList){ //альтернативный компактный метод. метод позволяет подсчитать и рассортировать статусы.
-      Map<PetStatus, Integer> statusList = new HashMap<>();
-      for (Pet currentPet : petList){
-          statusList.put(currentPet.getPetStatus(),statusList.getOrDefault(currentPet.getPetStatus(),0)+1); //
-      }
-      return statusList;
-  }
-}

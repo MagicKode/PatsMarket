@@ -20,10 +20,12 @@ public class KeyService {
     }
 
     public Key valid(Key key){ //метод ВАЛИДАЦИИ ключа
+        log.warn("NO key was found!!!");
         return keyRepository.getKeyByKey(key.getKey());
     }
 
     public Key getKeyByKeyString(Key key){ //уточнить про этот метод??????
+        //логирование как сделать тут???
         return keyRepository.getKeyByKey(key.getKey());
     }
 

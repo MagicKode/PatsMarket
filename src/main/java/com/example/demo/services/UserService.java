@@ -36,6 +36,48 @@ public class UserService {
     @Autowired
     KeyRepository keyRepository;
 
+    //Пишем методы действия с Юзерами
+    public void addUser(User user){ //альтернативный метод ДОБАВЛЕНИЯ / СОЗДАНИЯ  нового Юзера.
+        log.info("user is created");
+        userRepository.save(user);
+    }
+
+    public Optional <User> getUserById(long id){//альтернативный метод НАХЛЖДЕНИЯ юзера по ID
+        return userRepository.findById(id);
+    }
+
+    public void deleteUserById(long id){// альтернативный метод УДАЛЕНИЯ юзера по ID
+        userRepository.deleteById(id);
+    }
+
+    public List<User> getAllUsers(){
+        return userRepository.findAll();
+    }
+
+
+    public boolean valid(String key){ //метод для проверки СОВПАДЕНИЯ ИСКОТОГО ключа и его НАЛИЧИЕ
+        return keyStorage.keyExist(key);
+    }
+
+    public void addKey(String key){//альтернативный метод для ДОБАВЛЕНИЯ ключей
+        keyStorage.addKey(key);
+    }
+
+    public String getKeyByKey(String s){//для чего данный метод?????
+        List<String> keyList = keyStorage.getAllKeys();
+
+        for (String key:keyList) {
+            if (key.equals(s)){
+                return key;
+            }
+        }
+        return "no SUCH key exists";
+    }
+}
+
+
+
+
 
     /*public void addUser(User user){//создаём метод ДОБАВЛЕНИЯ пользователя в список.
         user.setId(userId);
@@ -66,42 +108,3 @@ public class UserService {
         }
     }*/
 
-    public void addUser(User user){ //альтернативный метод ДОБАВЛЕНИЯ / СОЗДАНИЯ  нового Юзера.
-        log.info("user is created");
-        userRepository.save(user);
-    }
-
-    public Optional <User> getUserById(long id){//альтернативный метод НАХЛЖДЕНИЯ юзера по ID
-        return userRepository.findById(id);
-    }
-
-    public void deleteUserById(long id){// альтернативный метод УДАЛЕНИЯ юзера по ID
-        userRepository.deleteById(id);
-    }
-
-    public List<User> getAllUsers(){
-        return userRepository.findAll();
-   }
-
-
-
-
-    public boolean valid(String key){ //метод для проверки СОВПАДЕНИЯ ИСКОТОГО ключа и его НАЛИЧИЕ
-        return keyStorage.keyExist(key);
-    }
-
-    public void addKey(String key){//альтернативный метод для ДОБАВЛЕНИЯ ключей
-        keyStorage.addKey(key);
-    }
-
-    public String getKeyByKey(String s){//для чего данный метод?????
-        List<String> keyList = keyStorage.getAllKeys();
-
-        for (String key:keyList) {
-            if (key.equals(s)){
-               return key;
-            }
-        }
-        return "no SUCH key exists";
-    }
-}

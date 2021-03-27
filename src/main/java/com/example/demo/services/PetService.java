@@ -20,6 +20,44 @@ public class PetService { //
     @Autowired
     PetRepository petRepository;
 
+    public void createPet(Pet pet){ //альтернативный метод СОЗДАНИЯ / ДОБАВЛЕНИЯ зверя в list
+        log.info("Pet is created!!");//добавляем ЛОГИРОВАНИЕ на Создание зверя
+        petRepository.save(pet);
+    }
+
+    public Pet getByPetId(long id){ //альтернтивный метод НАХОЖДЕНИЯ зверя по ID
+        log.info("Pet with id= "+id+" is found"); //добавдяем ЛОГИРОВАНИЕ на Нахлждение зверя по ID
+        return petRepository.getOne(id);
+    }
+
+
+    public List<Pet> getByPetStatus(PetStatus petStatus){//альтернативный метод НАХОЖЖЛДЕНИЯ зверя по Статусу.
+        log.info("Pet with Stetus= "+petStatus+" is found");//добавдяем ЛОГИРОВАНИЕ на Нахлждение зверя по статусу
+        return petRepository.findAllByPetStatus(petStatus);
+    }
+
+    public void updateExistPet(Pet pet){//альтернативный метод ОБНОВЛЕНИЯ / СОХРАНЕНИЯ зверя
+        log.info("Pet was saved!");//добавдяем ЛОГИРОВАНИЕ на ОБНОВЛЕНИЮ/СОХРАНЕНИЮ зверя
+        petRepository.save(pet);
+    }
+
+
+    public void deleteByPetId(long id){//альтернативный метод УДАЛЕНИЯ зверя по ID
+        log.info("Pet wirh id= "+id+" was deleted");//добавдяем ЛОГИРОВАНИЕ на Удалению зверя по ID
+        petRepository.deleteById(id);
+    }
+
+    public List<Pet> getPetList(){//альтернативный метод НАХОЖДЕНИЯ ВСЕХ зверей в Листе
+        log.info("All pets were found!!");//добавдяем ЛОГИРОВАНИЕ на Нахлждение всех зверей
+        return petRepository.findAll();
+    }
+
+}
+
+
+
+
+
 
     //private List<Pet> petList = new ArrayList<>(); //создаём лист СОХРАНЕНИЯ созданных зверей  //Для чего??? Если не использовать сторы. При наличии сторэджов , сейчас нет смысла создавать новый список.
     //private static long petId = 1;
@@ -78,31 +116,3 @@ public class PetService { //
 
 
 
-    public void createPet(Pet pet){ //альтернативный метод СОЗДАНИЯ / ДОБАВЛЕНИЯ зверя в list
-        log.info("Pet is created!!");//добавляем ЛОГИРОВАНИЕ
-        petRepository.save(pet);
-    }
-
-    public Pet getByPetId(long id){ //альтернтивный метод НАХОЖДЕНИЯ зверя по ID
-        return petRepository.getOne(id);
-    }
-
-
-    public List<Pet> getByPetStatus(PetStatus petStatus){//альтернативный метод НАХОЖЖЛДЕНИЯ зверя по Статусу.
-        return petRepository.findAllByPetStatus(petStatus);
-    }
-
-    public void updateExistPet(Pet pet){//альтернативный метод ОБНОВЛЕНИЯ / СОХРАНЕНИЯ зверя
-        petRepository.save(pet);
-    }
-
-
-    public void deleteByPetId(long id){//альтернативный метод УДАЛЕНИЯ зверя по ID
-        petRepository.deleteById(id);
-    }
-
-    public List<Pet> getPetList(){//альтернативный метод НАХОЖДЕНИЯ ВСЕХ зверей в Листе
-        return petRepository.findAll();
-    }
-
-}

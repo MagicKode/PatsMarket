@@ -5,9 +5,11 @@ import com.example.demo.models.UserStatus;
 import com.example.demo.store.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@DataJpaTest
 class UserServiceTest {
 
     @Autowired
@@ -37,3 +39,5 @@ class UserServiceTest {
         userRepository.getOne(2L);
     }
 }
+
+//ассёрты - проверя.т наличие чего-либо. Это точки, в которых мы можем проверить инфу на определённое условие.
